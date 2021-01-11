@@ -2,8 +2,9 @@ from discord.ext import commands
 import os
 import traceback
 
-token = os.environ['DISCORD_BOT_TOKEN']
+
 bot = commands.Bot(command_prefix='/')
+token = os.environ['DISCORD_BOT_TOKEN']
 
 @bot.event
 async def on_message(message):
@@ -18,4 +19,8 @@ async def on_message(message):
 async def ping(ctx):
     await ctx.send('pong')
 
+@bot.commands
+async def neko(ctx):
+    await ctx.send('にゃーん')
+    
 bot.run(token)

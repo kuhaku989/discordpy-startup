@@ -3,6 +3,8 @@ import random
 import sys
 import asyncio
 import re
+import os
+
 
 token = os.environ['DISCORD_BOT_TOKEN']
 client = discord.Client()

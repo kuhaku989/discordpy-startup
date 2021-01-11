@@ -33,5 +33,5 @@ async def on_voice_state_update(member, before, after):
         role1 = discord.utils.get(member.guild.roles, name=remove_mention_name)
         await member.remove_roles(role1)
 
-
+        
 bot.run(token)
